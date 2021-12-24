@@ -1,5 +1,6 @@
 import argparse
 import collections
+import math
 # Gestion de los parametros de entrada
 parser = argparse.ArgumentParser(description='Analisis de un sistema recomendador')
 parser.add_argument('file', type=argparse.FileType('r'))
@@ -19,21 +20,30 @@ for i in linea_fichero:
     terminos.append(doc)
 
 stop_words = []
-#f = open('stopwords_english_fixed.txt', 'r')
+f = open('stopwords_english_fixed.txt', 'r')
 
-f = open('stop-words_english_6_en.txt', 'r')
-data = f.read().decode("utf-8-sig").encode("utf-8")
-stop_words = data
-#stop_words = f.read()
+#f = open('stop-words_english_6_en.txt', 'r')
+#data = f.read().decode("utf-8-sig").encode("utf-8")
+#stop_words = data
+stop_words = f.read()
 f.close()
 
 #print stop_words
 #print terminos
-for t in terminos:
-    for i in t:
-         if i in stop_words:
-            #print "Elemento eliminado - " + str(t)
-            t.remove(i)
+for t in range(len(terminos)):
+    print terminos[t]
+    for i in range(len(terminos[t])):
+         print "Elemento analizado - " + str(terminos[t][i])
+         if terminos[t][i] in stop_words:
+            print "***Elemento eliminado - " + str(terminos[t][i])
+            terminos[t][i] = "-"
+
+for l in range(len(terminos)):
+    terminos[l] = [i for i in terminos[l] if i != "-"]
+
+
+print
+print terminos
 
 #print terminos
 
@@ -47,17 +57,17 @@ for doc_list in terminos:
 #print "------------------"
 print (len(terminos_unicos))
 
-matriz_tf = [ [ 0 for y in range(len(terminos_unicos)) ] for x in range( len(terminos)) ] #Primero pongo col, luego filas
+matriz_tf = [ [ [0,0,0] for y in range(len(terminos_unicos)) ] for x in range( len(terminos)) ] #Primero pongo col, luego filas
 
-def show_matriz(matrix):
+def show_matriz(matrix, pos):
     for i in range(len(matrix)):
         aux_fila = "[" + str(i) + "] ->  "
         for j in range(len(matrix[i])):
-            aux_fila += "{:.2f}".format(matrix[i][j])
+            aux_fila += "{:.2f}".format(matrix[i][j][pos])
             aux_fila += "\t\t"
         print (aux_fila)
 
-show_matriz(matriz_tf)
+show_matriz(matriz_tf, 0)
 
 def CountFrequency(my_list):
     count = {}
@@ -65,13 +75,36 @@ def CountFrequency(my_list):
         count[i] = count.get(i, 0) + 1
     return count
 
+print terminos_unicos
 for doc in range(len(terminos)):
     recuento = CountFrequency(terminos[doc])
     for k,v in recuento.items():
-        matriz_tf[doc][terminos_unicos.index(k)] = v
+        matriz_tf[doc][terminos_unicos.index(k)][0] = v
+
+
+def calc_IDF():
+    N = len(matriz_tf)
+    for i in range(len(matriz_tf)):
+        for j in range(len(matriz_tf[i])):
+            docs_aparece = 0
+            for cont in range(len(matriz_tf)):
+                if (matriz_tf[cont][j][0] != 0):
+                    docs_aparece += 1
+            valor = math.log((N/ float(docs_aparece)),10)
+            matriz_tf[i][j][1] = valor
+
+def calc_TF_IDF():
+    for i in range(len(matriz_tf)):
+        for j in range(len(matriz_tf[i])):
+            matriz_tf[i][j][2] =  matriz_tf[i][j][0] *  matriz_tf[i][j][1]
 
 print
-show_matriz(matriz_tf)
-
+show_matriz(matriz_tf,0)
+calc_IDF()
+print
+show_matriz(matriz_tf,1)
+calc_TF_IDF()
+print
+show_matriz(matriz_tf,2)
 
 #Hasta aqui borrados los stopwords
