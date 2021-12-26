@@ -67,6 +67,15 @@ def show_matriz(matrix, pos):
             aux_fila += "\t\t"
         print (aux_fila)
 
+
+def show_matriz_sim(matrix):
+    for i in range(len(matrix)):
+        aux_fila = "[" + str(i) + "] ->  "
+        for j in range(len(matrix[i])):
+            aux_fila += "{:.2f}".format(matrix[i][j])
+            aux_fila += "\t\t"
+        print (aux_fila)
+
 show_matriz(matriz_tf, 0)
 
 def CountFrequency(my_list):
@@ -98,13 +107,35 @@ def calc_TF_IDF():
         for j in range(len(matriz_tf[i])):
             matriz_tf[i][j][2] =  matriz_tf[i][j][0] *  matriz_tf[i][j][1]
 
+matriz_sim = [ [ 0 for y in range(len(terminos)) ] for x in range(len(terminos)) ] #Primero pongo col, luego filas
+
+def calc_sim_cos(doc1, doc2):
+    parte_superior = 0
+    parte_inferior_izquierda = 0
+    parte_inferior_derecha = 0
+    for i in range(len(terminos_unicos)):
+       parte_superior += matriz_tf[doc1][i][2] * matriz_tf[doc2][i][2]
+       parte_inferior_izquierda += pow(matriz_tf[doc1][i][2],2)
+       parte_inferior_derecha += pow(matriz_tf[doc2][i][2],2)
+    denominador = math.sqrt(parte_inferior_derecha) * math.sqrt(parte_inferior_izquierda)
+    return (parte_superior/float(denominador))
+
+def fill_matriz_sim():
+    for i in range(len(matriz_sim)):
+        for j in range(len(matriz_sim[i])):
+            matriz_sim[i][j] = calc_sim_cos(i,j)
+
 print
 show_matriz(matriz_tf,0)
 calc_IDF()
 print
 show_matriz(matriz_tf,1)
 calc_TF_IDF()
-print
+print "-- MATRIZ VALORES TF-IDF"
 show_matriz(matriz_tf,2)
+
+fill_matriz_sim()
+print "+++ SIMILITUD +++"
+show_matriz_sim(matriz_sim)
 
 #Hasta aqui borrados los stopwords
