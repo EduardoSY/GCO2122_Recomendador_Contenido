@@ -34,6 +34,8 @@ El valor TF ("Term Frecuency") lo calculamos en base a la cantidad de veces que 
 
 IDF ("Inverse Document Frequency") nos indica la frecuencia con la que aparece el término en la colección de documentos. El cálculo se realiza de la siguiente manera:
 
+Es importante destacar que el logaritmo empleado es el logaritmo en base 10, no el logaritmo neperiano (base e).
+
 ![Imagen]()
 
 #### TF - IDF
