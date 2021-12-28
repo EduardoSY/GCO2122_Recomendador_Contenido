@@ -9,7 +9,17 @@ import sys
 # Gestion de los parametros de entrada
 parser = argparse.ArgumentParser(description='Analisis de un sistema recomendador')
 parser.add_argument('file', type=argparse.FileType('r'))
+parser.add_argument('-o', '--outfile', type=argparse.FileType('w'))
 args = parser.parse_args()
+
+original_stdout = sys.stdout
+
+if args.outfile is None:
+    print "Mostrar en Pantalla"
+else:
+    sys.stdout = args.outfile
+
+
 
 linea_fichero = args.file.readlines() # Devuelve un vector de strings
 
