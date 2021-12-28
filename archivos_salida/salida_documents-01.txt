@@ -1,3 +1,7 @@
+# RECOMENDADOR BASADO EN CONOCIMIENTO - Modo pantalla #
+
+Fichero de entrada: archivos_testing/documents-01.txt
+Resultado guardado en: archivos_salida/salida_documents-01.txt
 
 ## Documento 0
 

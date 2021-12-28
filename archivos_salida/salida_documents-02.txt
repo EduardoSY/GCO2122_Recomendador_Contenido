@@ -1,0 +1,321 @@
+# RECOMENDADOR BASADO EN CONOCIMIENTO - Modo pantalla #
+
+Fichero de entrada: archivos_testing/documents-02.txt
+Resultado guardado en: archivos_salida/salida_documents-02.txt
+
+## Documento 0
+
+Terminos analizados del documento >> 16 palabras
+['dry', 'wine', 'spicy', 'tight', 'taut', 'texture', 'mineral', 'character', 'layered', 'citrus', 'well', 'pepper', 'food', 'wine', 'crisp', 'aftertaste']
+
+N.  Termino              TF  IDF    TF-IDF
+1   dry                  1   0.699  0.699 
+2   wine                 2   0.523  1.046 
+3   spicy                1   1.000  1.000 
+4   tight                1   1.000  1.000 
+5   taut                 1   1.000  1.000 
+6   texture              1   1.000  1.000 
+7   mineral              1   1.000  1.000 
+8   character            1   0.699  0.699 
+9   layered              1   1.000  1.000 
+10  citrus               1   1.000  1.000 
+11  well                 1   1.000  1.000 
+12  pepper               1   0.523  0.523 
+13  food                 1   1.000  1.000 
+14  crisp                1   1.000  1.000 
+15  aftertaste           1   1.000  1.000 
+---------------------------------------------------------------
+
+## Documento 1
+
+Terminos analizados del documento >> 16 palabras
+['reduced', 'wine', 'offers', 'chalky', 'tannic', 'backbone', 'juicy', 'explosion', 'rich', 'black', 'cherry', 'accented', 'firm', 'oak', 'cigar', 'box']
+
+N.  Termino              TF  IDF    TF-IDF
+1   wine                 1   0.523  0.523 
+2   reduced              1   1.000  1.000 
+3   offers               1   1.000  1.000 
+4   chalky               1   1.000  1.000 
+5   tannic               1   0.699  0.699 
+6   backbone             1   1.000  1.000 
+7   juicy                1   0.699  0.699 
+8   explosion            1   1.000  1.000 
+9   rich                 1   1.000  1.000 
+10  black                1   0.699  0.699 
+11  cherry               1   0.699  0.699 
+12  accented             1   1.000  1.000 
+13  firm                 1   1.000  1.000 
+14  oak                  1   0.398  0.398 
+15  cigar                1   0.699  0.699 
+16  box                  1   0.699  0.699 
+---------------------------------------------------------------
+
+## Documento 2
+
+Terminos analizados del documento >> 20 palabras
+['dominated', 'oak', 'oak-driven', 'aromas', 'include', 'roasted', 'coffee', 'bean', 'espresso', 'coconut', 'vanilla', 'carry', 'palate', 'plum', 'chocolate', 'astringent', 'drying', 'tannins', 'abrupt', 'finish']
+
+N.  Termino              TF  IDF    TF-IDF
+1   oak                  1   0.398  0.398 
+2   dominated            1   1.000  1.000 
+3   oak-driven           1   0.699  0.699 
+4   aromas               1   0.222  0.222 
+5   include              1   1.000  1.000 
+6   roasted              1   1.000  1.000 
+7   coffee               1   1.000  1.000 
+8   bean                 1   1.000  1.000 
+9   espresso             1   1.000  1.000 
+10  coconut              1   1.000  1.000 
+11  vanilla              1   0.699  0.699 
+12  carry                1   0.699  0.699 
+13  palate               1   0.301  0.301 
+14  plum                 1   0.523  0.523 
+15  chocolate            1   1.000  1.000 
+16  astringent           1   1.000  1.000 
+17  drying               1   1.000  1.000 
+18  tannins              1   1.000  1.000 
+19  abrupt               1   1.000  1.000 
+20  finish               1   0.523  0.523 
+---------------------------------------------------------------
+
+## Documento 3
+
+Terminos analizados del documento >> 31 palabras
+['building', '150', 'years', 'generations', 'winemaking', 'tradition', 'winery', 'trends', 'leaner', 'style', 'classic', 'california', 'buttercream', 'aroma', 'cut', 'tart', 'green', 'apple', 'good', 'everyday', 'sipping', 'wine', 'flavors', 'range', 'pear', 'barely', 'ripe', 'pineapple', 'prove', 'approachable', 'distinctive']
+
+N.  Termino              TF  IDF    TF-IDF
+1   wine                 1   0.523  0.523 
+2   building             1   1.000  1.000 
+3   150                  1   1.000  1.000 
+4   years                1   1.000  1.000 
+5   generations          1   1.000  1.000 
+6   winemaking           1   1.000  1.000 
+7   tradition            1   1.000  1.000 
+8   winery               1   1.000  1.000 
+9   trends               1   1.000  1.000 
+10  leaner               1   1.000  1.000 
+11  style                1   1.000  1.000 
+12  classic              1   1.000  1.000 
+13  california           1   1.000  1.000 
+14  buttercream          1   1.000  1.000 
+15  aroma                1   1.000  1.000 
+16  cut                  1   1.000  1.000 
+17  tart                 1   0.699  0.699 
+18  green                1   0.699  0.699 
+19  apple                1   0.699  0.699 
+20  good                 1   0.699  0.699 
+21  everyday             1   1.000  1.000 
+22  sipping              1   1.000  1.000 
+23  flavors              1   0.523  0.523 
+24  range                1   1.000  1.000 
+25  pear                 1   1.000  1.000 
+26  barely               1   1.000  1.000 
+27  ripe                 1   0.699  0.699 
+28  pineapple            1   1.000  1.000 
+29  prove                1   1.000  1.000 
+30  approachable         1   0.699  0.699 
+31  distinctive          1   1.000  1.000 
+---------------------------------------------------------------
+
+## Documento 4
+
+Terminos analizados del documento >> 17 palabras
+['zesty', 'orange', 'peels', 'apple', 'notes', 'abound', 'sprightly', 'mineral-toned', 'riesling', 'dry', 'palate', 'racy', 'lean', 'refreshing', 'easy', 'quaffer', 'appeal']
+
+N.  Termino              TF  IDF    TF-IDF
+1   dry                  1   0.699  0.699 
+2   palate               1   0.301  0.301 
+3   apple                1   0.699  0.699 
+4   zesty                1   1.000  1.000 
+5   orange               1   1.000  1.000 
+6   peels                1   1.000  1.000 
+7   notes                1   0.523  0.523 
+8   abound               1   1.000  1.000 
+9   sprightly            1   1.000  1.000 
+10  mineral-toned        1   1.000  1.000 
+11  riesling             1   1.000  1.000 
+12  racy                 1   1.000  1.000 
+13  lean                 1   1.000  1.000 
+14  refreshing           1   1.000  1.000 
+15  easy                 1   1.000  1.000 
+16  quaffer              1   1.000  1.000 
+17  appeal               1   1.000  1.000 
+---------------------------------------------------------------
+
+## Documento 5
+
+Terminos analizados del documento >> 31 palabras
+['baked', 'plum', 'molasses', 'balsamic', 'vinegar', 'cheesy', 'oak', 'aromas', 'feed', 'palate', "that's", 'braced', 'bolt', 'acidity', 'compact', 'set', 'saucy', 'red-berry', 'plum', 'flavors', 'features', 'tobacco', 'peppery', 'accents', 'finish', 'mildly', 'green', 'flavor', 'respectable', 'weight', 'balance']
+
+N.  Termino              TF  IDF    TF-IDF
+1   oak                  1   0.398  0.398 
+2   aromas               1   0.222  0.222 
+3   palate               1   0.301  0.301 
+4   plum                 2   0.523  1.046 
+5   finish               1   0.523  0.523 
+6   green                1   0.699  0.699 
+7   flavors              1   0.523  0.523 
+8   baked                1   1.000  1.000 
+9   molasses             1   1.000  1.000 
+10  balsamic             1   1.000  1.000 
+11  vinegar              1   1.000  1.000 
+12  cheesy               1   1.000  1.000 
+13  feed                 1   1.000  1.000 
+14  that's               1   1.000  1.000 
+15  braced               1   1.000  1.000 
+16  bolt                 1   1.000  1.000 
+17  acidity              1   1.000  1.000 
+18  compact              1   1.000  1.000 
+19  set                  1   1.000  1.000 
+20  saucy                1   1.000  1.000 
+21  red-berry            1   1.000  1.000 
+22  features             1   1.000  1.000 
+23  tobacco              1   0.699  0.699 
+24  peppery              1   1.000  1.000 
+25  accents              1   1.000  1.000 
+26  mildly               1   1.000  1.000 
+27  flavor               1   0.699  0.699 
+28  respectable          1   1.000  1.000 
+29  weight               1   1.000  1.000 
+30  balance              1   1.000  1.000 
+---------------------------------------------------------------
+
+## Documento 6
+
+Terminos analizados del documento >> 22 palabras
+['raw', 'black-cherry', 'aromas', 'direct', 'simple', 'good', 'juicy', 'feel', 'thickens', 'oak', 'character', 'extract', 'flavor', 'profile', 'driven', 'dark-berry', 'fruits', 'smoldering', 'oak', 'finishes', 'meaty', 'hot']
+
+N.  Termino              TF  IDF    TF-IDF
+1   character            1   0.699  0.699 
+2   juicy                1   0.699  0.699 
+3   oak                  2   0.398  0.796 
+4   aromas               1   0.222  0.222 
+5   good                 1   0.699  0.699 
+6   flavor               1   0.699  0.699 
+7   raw                  1   1.000  1.000 
+8   black-cherry         1   1.000  1.000 
+9   direct               1   1.000  1.000 
+10  simple               1   1.000  1.000 
+11  feel                 1   1.000  1.000 
+12  thickens             1   1.000  1.000 
+13  extract              1   1.000  1.000 
+14  profile              1   1.000  1.000 
+15  driven               1   1.000  1.000 
+16  dark-berry           1   1.000  1.000 
+17  fruits               1   1.000  1.000 
+18  smoldering           1   1.000  1.000 
+19  finishes             1   1.000  1.000 
+20  meaty                1   1.000  1.000 
+21  hot                  1   1.000  1.000 
+---------------------------------------------------------------
+
+## Documento 7
+
+Terminos analizados del documento >> 27 palabras
+['desiccated', 'blackberry', 'leather', 'charred', 'wood', 'mint', 'aromas', 'carry', 'nose', 'full-bodied', 'tannic', 'heavily', 'oaked', 'tinto', 'fino', 'flavors', 'clove', 'woodspice', 'sit', 'blackberry', 'fruit', 'hickory', 'forceful', 'oak-based', 'aromas', 'dominate', 'finish']
+
+N.  Termino              TF  IDF    TF-IDF
+1   tannic               1   0.699  0.699 
+2   aromas               2   0.222  0.444 
+3   carry                1   0.699  0.699 
+4   finish               1   0.523  0.523 
+5   flavors              1   0.523  0.523 
+6   desiccated           1   1.000  1.000 
+7   blackberry           2   1.000  2.000 
+8   leather              1   1.000  1.000 
+9   charred              1   1.000  1.000 
+10  wood                 1   1.000  1.000 
+11  mint                 1   1.000  1.000 
+12  nose                 1   0.699  0.699 
+13  full-bodied          1   1.000  1.000 
+14  heavily              1   1.000  1.000 
+15  oaked                1   1.000  1.000 
+16  tinto                1   1.000  1.000 
+17  fino                 1   1.000  1.000 
+18  clove                1   1.000  1.000 
+19  woodspice            1   1.000  1.000 
+20  sit                  1   1.000  1.000 
+21  fruit                1   0.699  0.699 
+22  hickory              1   1.000  1.000 
+23  forceful             1   1.000  1.000 
+24  oak-based            1   1.000  1.000 
+25  dominate             1   1.000  1.000 
+---------------------------------------------------------------
+
+## Documento 8
+
+Terminos analizados del documento >> 28 palabras
+['fruit', 'aromas', 'pervade', 'nose', 'cigar', 'box', 'menthol', 'notes', 'riding', 'palate', 'restrained', 'entry', 'opens', 'riper', 'notes', 'cherry', 'plum', 'specked', 'crushed', 'pepper', 'blend', 'merlot', 'cabernet', 'sauvignon', 'cabernet', 'franc', 'approachable', 'enjoyed']
+
+N.  Termino              TF  IDF    TF-IDF
+1   pepper               1   0.523  0.523 
+2   cherry               1   0.699  0.699 
+3   cigar                1   0.699  0.699 
+4   box                  1   0.699  0.699 
+5   aromas               1   0.222  0.222 
+6   palate               1   0.301  0.301 
+7   plum                 1   0.523  0.523 
+8   approachable         1   0.699  0.699 
+9   notes                2   0.523  1.046 
+10  nose                 1   0.699  0.699 
+11  fruit                1   0.699  0.699 
+12  pervade              1   1.000  1.000 
+13  menthol              1   1.000  1.000 
+14  riding               1   1.000  1.000 
+15  restrained           1   1.000  1.000 
+16  entry                1   1.000  1.000 
+17  opens                1   1.000  1.000 
+18  riper                1   1.000  1.000 
+19  specked              1   1.000  1.000 
+20  crushed              1   1.000  1.000 
+21  blend                1   1.000  1.000 
+22  merlot               1   1.000  1.000 
+23  cabernet             2   1.000  2.000 
+24  sauvignon            1   1.000  1.000 
+25  franc                1   1.000  1.000 
+26  enjoyed              1   1.000  1.000 
+---------------------------------------------------------------
+
+## Documento 9
+
+Terminos analizados del documento >> 23 palabras
+['ripe', 'aromas', 'dark', 'berries', 'mingle', 'ample', 'notes', 'black', 'pepper', 'toasted', 'vanilla', 'dusty', 'tobacco', 'palate', 'oak-driven', 'nature', 'notes', 'tart', 'currant', 'shine', 'offering', 'bit', 'levity']
+
+N.  Termino              TF  IDF    TF-IDF
+1   pepper               1   0.523  0.523 
+2   black                1   0.699  0.699 
+3   oak-driven           1   0.699  0.699 
+4   aromas               1   0.222  0.222 
+5   vanilla              1   0.699  0.699 
+6   palate               1   0.301  0.301 
+7   tart                 1   0.699  0.699 
+8   ripe                 1   0.699  0.699 
+9   notes                2   0.523  1.046 
+10  tobacco              1   0.699  0.699 
+11  dark                 1   1.000  1.000 
+12  berries              1   1.000  1.000 
+13  mingle               1   1.000  1.000 
+14  ample                1   1.000  1.000 
+15  toasted              1   1.000  1.000 
+16  dusty                1   1.000  1.000 
+17  nature               1   1.000  1.000 
+18  currant              1   1.000  1.000 
+19  shine                1   1.000  1.000 
+20  offering             1   1.000  1.000 
+21  bit                  1   1.000  1.000 
+22  levity               1   1.000  1.000 
+---------------------------------------------------------------
+
+### SIMILITUD ENTRE DOCUMENTOS ###
+
+           [D.0]    [D.1]    [D.2]    [D.3]    [D.4]    [D.5]    [D.6]    [D.7]    [D.8]    [D.9]    
+[Doc 0] -> 1.000    0.044    0.000    0.029    0.035    0.000    0.032    0.000    0.016    0.018    
+[Doc 1] -> 0.044    1.000    0.012    0.016    0.000    0.010    0.057    0.030    0.091    0.036    
+[Doc 2] -> 0.000    0.012    1.000    0.000    0.006    0.060    0.023    0.047    0.023    0.073    
+[Doc 3] -> 0.029    0.016    0.000    1.000    0.025    0.030    0.023    0.011    0.020    0.047    
+[Doc 4] -> 0.035    0.000    0.006    0.025    1.000    0.005    0.000    0.000    0.035    0.042    
+[Doc 5] -> 0.000    0.010    0.060    0.030    0.005    1.000    0.041    0.027    0.029    0.031    
+[Doc 6] -> 0.032    0.057    0.023    0.023    0.000    0.041    1.000    0.005    0.002    0.003    
+[Doc 7] -> 0.000    0.030    0.047    0.011    0.000    0.027    0.005    1.000    0.046    0.005    
+[Doc 8] -> 0.016    0.091    0.023    0.020    0.035    0.029    0.002    0.046    1.000    0.078    
+[Doc 9] -> 0.018    0.036    0.073    0.047    0.042    0.031    0.003    0.005    0.078    1.000    

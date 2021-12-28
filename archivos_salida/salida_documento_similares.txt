@@ -1,0 +1,143 @@
+# RECOMENDADOR BASADO EN CONOCIMIENTO - Modo pantalla #
+
+Fichero de entrada: archivos_testing/documento_similares.txt
+Resultado guardado en: archivos_salida/salida_documento_similares.txt
+
+## Documento 0
+
+Terminos analizados del documento >> 20 palabras
+['aromas', 'include', 'tropical', 'fruit', 'broom', 'brimstone', 'dried', 'herb', 'palate', 'overly', 'expressive', 'offering', 'unripened', 'apple', 'citrus', 'dried', 'sage', 'alongside', 'brisk', 'acidity']
+
+N.  Termino              TF  IDF    TF-IDF
+1   aromas               1   0.079  0.079 
+2   include              1   0.176  0.176 
+3   tropical             1   0.176  0.176 
+4   fruit                1   0.301  0.301 
+5   broom                1   0.176  0.176 
+6   brimstone            1   0.301  0.301 
+7   dried                2   0.176  0.352 
+8   herb                 1   0.176  0.176 
+9   palate               1   0.176  0.176 
+10  overly               1   0.176  0.176 
+11  expressive           1   0.176  0.176 
+12  offering             1   0.176  0.176 
+13  unripened            1   0.176  0.176 
+14  apple                1   0.176  0.176 
+15  citrus               1   0.176  0.176 
+16  sage                 1   0.176  0.176 
+17  alongside            1   0.176  0.176 
+18  brisk                1   0.176  0.176 
+19  acidity              1   0.176  0.176 
+---------------------------------------------------------------
+
+## Documento 1
+
+Terminos analizados del documento >> 21 palabras
+['aromas', 'include', 'tropical', 'juicy', 'fruit', 'broom', 'brimstone', 'dried', 'herb', 'palate', 'overly', 'expressive', 'offering', 'unripened', 'apple', 'citrus', 'dried', 'sage', 'alongside', 'brisk', 'acidity']
+
+N.  Termino              TF  IDF    TF-IDF
+1   aromas               1   0.079  0.079 
+2   include              1   0.176  0.176 
+3   tropical             1   0.176  0.176 
+4   fruit                1   0.301  0.301 
+5   broom                1   0.176  0.176 
+6   brimstone            1   0.301  0.301 
+7   dried                2   0.176  0.352 
+8   herb                 1   0.176  0.176 
+9   palate               1   0.176  0.176 
+10  overly               1   0.176  0.176 
+11  expressive           1   0.176  0.176 
+12  offering             1   0.176  0.176 
+13  unripened            1   0.176  0.176 
+14  apple                1   0.176  0.176 
+15  citrus               1   0.176  0.176 
+16  sage                 1   0.176  0.176 
+17  alongside            1   0.176  0.176 
+18  brisk                1   0.176  0.176 
+19  acidity              1   0.176  0.176 
+20  juicy                1   0.477  0.477 
+---------------------------------------------------------------
+
+## Documento 2
+
+Terminos analizados del documento >> 20 palabras
+['aromas', 'include', 'tropical', 'fruit', 'broom', 'random', 'dried', 'herb', 'palate', 'overly', 'expressive', 'offering', 'unripened', 'apple', 'citrus', 'dried', 'sage', 'alongside', 'brisk', 'acidity']
+
+N.  Termino              TF  IDF    TF-IDF
+1   aromas               1   0.079  0.079 
+2   include              1   0.176  0.176 
+3   tropical             1   0.176  0.176 
+4   fruit                1   0.301  0.301 
+5   broom                1   0.176  0.176 
+6   dried                2   0.176  0.352 
+7   herb                 1   0.176  0.176 
+8   palate               1   0.176  0.176 
+9   overly               1   0.176  0.176 
+10  expressive           1   0.176  0.176 
+11  offering             1   0.176  0.176 
+12  unripened            1   0.176  0.176 
+13  apple                1   0.176  0.176 
+14  citrus               1   0.176  0.176 
+15  sage                 1   0.176  0.176 
+16  alongside            1   0.176  0.176 
+17  brisk                1   0.176  0.176 
+18  acidity              1   0.176  0.176 
+19  random               1   0.477  0.477 
+---------------------------------------------------------------
+
+## Documento 3
+
+Terminos analizados del documento >> 21 palabras
+['aromiixs', 'include', 'tropical', 'juicy', 'broom', 'random', 'brimstone', 'dried', 'herb', 'palate', 'overly', 'expressive', 'offering', 'unripened', 'apple', 'citrus', 'dried', 'sage', 'alongside', 'brisk', 'acidity']
+
+N.  Termino              TF  IDF    TF-IDF
+1   include              1   0.176  0.176 
+2   tropical             1   0.176  0.176 
+3   broom                1   0.176  0.176 
+4   brimstone            1   0.301  0.301 
+5   dried                2   0.176  0.352 
+6   herb                 1   0.176  0.176 
+7   palate               1   0.176  0.176 
+8   overly               1   0.176  0.176 
+9   expressive           1   0.176  0.176 
+10  offering             1   0.176  0.176 
+11  unripened            1   0.176  0.176 
+12  apple                1   0.176  0.176 
+13  citrus               1   0.176  0.176 
+14  sage                 1   0.176  0.176 
+15  alongside            1   0.176  0.176 
+16  brisk                1   0.176  0.176 
+17  acidity              1   0.176  0.176 
+18  juicy                1   0.477  0.477 
+19  random               1   0.477  0.477 
+20  aromiixs             1   0.778  0.778 
+---------------------------------------------------------------
+
+## Documento 4
+
+Terminos analizados del documento >> 56 palabras
+['aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas']
+
+N.  Termino              TF  IDF    TF-IDF
+1   aromas               56  0.079  4.434 
+---------------------------------------------------------------
+
+## Documento 5
+
+Terminos analizados del documento >> 57 palabras
+['aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'aromas', 'doggo']
+
+N.  Termino              TF  IDF    TF-IDF
+1   aromas               56  0.079  4.434 
+2   doggo                1   0.778  0.778 
+---------------------------------------------------------------
+
+### SIMILITUD ENTRE DOCUMENTOS ###
+
+           [D.0]    [D.1]    [D.2]    [D.3]    [D.4]    [D.5]    
+[Doc 0] -> 1.000    0.879    0.814    0.585    0.090    0.088    
+[Doc 1] -> 0.879    1.000    0.716    0.686    0.079    0.078    
+[Doc 2] -> 0.814    0.716    1.000    0.648    0.083    0.082    
+[Doc 3] -> 0.585    0.686    0.648    1.000    0.000    0.000    
+[Doc 4] -> 0.090    0.079    0.083    0.000    1.000    0.985    
+[Doc 5] -> 0.088    0.078    0.082    0.000    0.985    1.000    
