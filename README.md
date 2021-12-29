@@ -6,6 +6,10 @@
 
 ***
 
+## Enlaces
+1. [Ficheros de entrada](https://github.com/EduardoSY/GCO2122_Recomendador_Contenido/tree/main/archivos_testing)
+2. [Resultados de los ficheros de entrada](https://github.com/EduardoSY/GCO2122_Recomendador_Contenido/tree/main/archivos_salida)
+
 ## Objetivo de la práctica:
 
 El objetivo de esta práctica es implementar un sistema de recomendación siguiendo el modelo basados en el contenido.
