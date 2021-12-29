@@ -63,6 +63,60 @@ Para comprobar el correcto funcionamiento de la práctica se han empleado los fi
 ## Descripción de la implementación:
 Para poder calcular la similitud entre documentos debemos primero calcular 3 valores: TF, IDF y TF-IDF
 
+### Lectura del fichero y eliminación de palabras (stopwords)
+Lo primero que hacemos es filtrar aquellas palabras que carecen de valor como son los artículos, conectores, preposiciones, etc.
+
+Para ello cargamos un fichero de stopwords y filtramos las palabras. Si el término que estamos analizando se encuentra en esta lista es descartada.
+
+```python
+#--- Eliminar stopwords ---
+stop_words = []
+f = open('stopwords_english_fixed.txt', 'r')
+stop_words = f.read()
+f.close()
+
+# Analizar palabras y descartar stopwords
+for t in range(len(terminos)):
+    for i in range(len(terminos[t])):
+         if terminos[t][i] in stop_words:
+            # Los elementos que queremos descartar los sustituimos por -
+            terminos[t][i] = "-"
+
+# Anadir elementos que no son - (palabra eliminada)
+for l in range(len(terminos)):
+    terminos[l] = [i for i in terminos[l] if i != "-"]
+```
+
+### Matriz para almacenar los valores TF, IDF y TF-IDF
+Para almacenar los valores mencionados de cada uno de los términos y la relación con cada documento se ha implementado una matriz de la siguiente manera.
+
+Lo primero es identificar qué terminos han aparecido en el fichero y almacenarlos. En este vector no hay términos repetidos.
+
+```python
+# Palabras analizadas (sin repetirse)
+terminos_unicos = []
+for doc_list in terminos:
+    for elemento in doc_list:
+        if elemento not in terminos_unicos:
+            terminos_unicos.append(elemento)
+```
+
+Una vez hecho esto se crea la matriz.
+
+```python
+# Matriz de terminos donde se almacenan los valores [TF, IDF, TF-IDF]
+matriz_terminos = [ [ [0,0,0] for y in range(len(terminos_unicos)) ] for x in range( len(terminos)) ] #Primero pongo col, luego filas
+```
+
+Cada posición de la matriz (documento-término) guarda un array de 3 valores de la siguiente manera >> [TF, IDF, TF-IDF]
+
+Internamente sería algo así:
+
+DOC\TERMS | aromas | include | ...  |
+--- | --- | --- |--- |
+Documento1 | \[1, 0.398, 0.398] | \[1, 1.000, 1.000]  | ...  |
+... | ... | ...  | ...  |
+
 ### 1. TF
 El valor TF ("Term Frecuency") lo calculamos en base a la cantidad de veces que aparece un determinado término en un documento. Simplemente contamos la cantidad de veces que aparece.
 
@@ -155,6 +209,13 @@ N.  Termino              TF  IDF    TF-IDF
 ```
 
 ### 4. Calculo de la similitud.
+Todos los cálculos que hagamos se van a guardar en una matriz de similitud de documentos, que será la siguiente:
+
+```python
+# Matriz de similitud de documentos
+matriz_sim = [ [ 0 for y in range(len(terminos)) ] for x in range(len(terminos)) ] #Primero pongo col, luego filas
+```
+
 Para calcular la similitud entre dos documentos hacemos uso de la siguiente función.
 
 ![Imagen](./img/sim_cos.PNG)
@@ -163,7 +224,7 @@ Esta función se interpreta de la siguiente manera (x es a, y es b):
 
 ![Imagen](./img/sim_cos_desarrollado.PNG)
 
-Para cada par de documentos aplicamos la formula y rellenamos una matriz de similitud de documentos. Como es de esperar, la diagonal nos debe dar 1.
+Para cada par de documentos aplicamos la formula y rellenamos la matriz de similitud de documentos. Como es de esperar, la diagonal nos debe dar 1.
 
 Aquí un ejemplo del resultado al utilizar el fichero de prueba [documents-01.txt](https://github.com/EduardoSY/GCO2122_Recomendador_Contenido/blob/main/archivos_testing/documents-01.txt)
 
