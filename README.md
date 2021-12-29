@@ -22,7 +22,7 @@ python GCO_contenido.py archivos_testing/documents-01.txt -o archivos_salida/sal
 
 En la siguiente imagen se muestra un ejemplo real de uso.
 
-![Captura ejecicion](./img/Exec_cap1.png)
+![Captura ejecicion](./img/Exec_final.png)
 
 En caso de querer que la información se guarde en un fichero debemos añadir otro argumento
 
