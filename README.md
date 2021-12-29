@@ -16,6 +16,8 @@ Si queremos que la información se nos muestre en la consola hacemos ejecutamos 
 
 ```bash
 ...$ python GCO_contenido.py archivo_entrada.txt
+
+python GCO_contenido.py archivos_testing/documents-01.txt -o archivos_salida/salida_documents-01.txt
 ```
 
 En la siguiente imagen se muestra un ejemplo real de uso.
