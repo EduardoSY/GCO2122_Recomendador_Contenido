@@ -30,10 +30,22 @@ Aquí un ejemplo real:
 ...$ python GCO_contenido.py archivos_testing/documents-01.txt -o archivos_salida/salida_documents-01.txt
 ```
 
+Para comprobar el correcto funcionamiento de la práctica se han empleado los ficheros proporcionados por el profesor así como algún otro fichero creado para testear cuestiones específicas:
+
+| Fichero de entrada | Fichero de salida |
+| -- | -- |
+| [documents-01.txt](./archivos_testing/documents-01.txt) | [salida_documents-01.txt](./archivos_salida/salida_documents-01.txt) |
+| [documents-02.txt](./archivos_testing/documents-02.txt) | [salida_documents-02.txt](./archivos_salida/salida_documents-02.txt) |
+| [documents-03.txt](./archivos_testing/documents-03.txt) | [salida_documents-03.txt](./archivos_salida/salida_documents-03.txt) |
+| [documento_similares.txt](./archivos_testing/documento_similares.txt) | [salida_documento_similares.txt](./archivos_salida/salida_documento_similares.txt) |
+
+
+***
+
 ### Descripción de la implementación:
 Para poder calcular la similitud entre documentos debemos primero calcular 3 valores: TF, IDF y TF-IDF
 
-#### TF
+#### 1. TF
 El valor TF ("Term Frecuency") lo calculamos en base a la cantidad de veces que aparece un determinado término en un documento. Simplemente contamos la cantidad de veces que aparece.
 
 La implementación hecha es la siguiente:
@@ -54,7 +66,7 @@ def calc_TF():
             matriz_terminos[doc][terminos_unicos.index(k)][0] = v
 ```
 
-#### IDF
+#### 2. IDF
 
 IDF ("Inverse Document Frequency") nos indica la frecuencia con la que aparece el término en la colección de documentos. El cálculo se realiza de la siguiente manera:
 
@@ -80,7 +92,7 @@ def calc_IDF():
             matriz_terminos[i][j][1] = valor
 ```
 
-#### TF - IDF
+#### 3. TF - IDF
 Este es el último valor a calcular antes de poder calcular la similitud entre documentos. Este valor se calcula simplemente como el producto entre los valores TF e IDF.
 
 ```python
@@ -124,7 +136,7 @@ N.  Termino              TF  IDF    TF-IDF
 ---------------------------------------------------------------
 ```
 
-#### Calculo de la similitud.
+#### 4. Calculo de la similitud.
 Para calcular la similitud entre dos documentos hacemos uso de la siguiente función.
 
 ![Imagen](./img/sim_cos.PNG)
