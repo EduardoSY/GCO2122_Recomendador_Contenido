@@ -6,11 +6,29 @@
 
 ***
 
-### Objetivo de la práctica:
+## Objetivo de la práctica:
 
 El objetivo de esta práctica es implementar un sistema de recomendación siguiendo el modelo basados en el contenido.
 
-### Ejemplo de uso
+## Ejemplo de uso
+Los ficheros de entrada son ficheros de texto. Cada línea del fichero se considera un documento. Además, para que se puedan eliminar las "stop-words", el contenido debe estar en inglés.
+
+Este es un ejemplo de fichero:
+
+```
+Aromas include tropical fruit, broom, brimstone and dried herb. The palate isn't overly expressive, offering unripened apple, citrus and dried sage alongside brisk acidity.
+This is ripe and fruity, a wine that is smooth while still structured. Firm tannins are filled out with juicy red berry fruits and freshened with acidity. It's  already drinkable, although it will certainly be better from 2016.
+Tart and snappy, the flavors of lime flesh and rind dominate. Some green pineapple pokes through, with crisp acidity underscoring the flavors. The wine was all stainless-steel fermented.
+Pineapple rind, lemon pith and orange blossom start off the aromas. The palate is a bit more opulent, with notes of honey-drizzled guava and mango giving way to a slightly astringent, semidry finish.
+Much like the regular bottling from 2012, this comes across as rather rough and tannic, with rustic, earthy, herbal characteristics. Nonetheless, if you think of it as a pleasantly unfussy country wine, it's a good companion to a hearty winter stew.
+Blackberry and raspberry aromas show a typical Navarran whiff of green herbs and, in this case, horseradish. In the mouth, this is fairly full bodied, with tomatoey acidity. Spicy, herbal flavors complement dark plum fruit, while the finish is fresh but grabby.
+Here's a bright, informal red that opens with aromas of candied berry, white pepper and savory herb that carry over to the palate. It's balanced with fresh acidity and soft tannins.
+This dry and restrained wine offers spice in profusion. Balanced with acidity and a firm texture, it's very much for food.
+Savory dried thyme notes accent sunnier flavors of preserved peach in this brisk, off-dry wine. It's fruity and fresh, with an elegant, sprightly footprint.
+This has great depth of flavor with its fresh apple and pear fruits and touch of spice. It's off dry while balanced with acidity and a crisp texture. Drink now.
+```
+
+### Ejecución del programa
 
 Si queremos que la información se nos muestre en la consola hacemos ejecutamos el comando de la siguiente manera:
 
@@ -42,10 +60,10 @@ Para comprobar el correcto funcionamiento de la práctica se han empleado los fi
 
 ***
 
-### Descripción de la implementación:
+## Descripción de la implementación:
 Para poder calcular la similitud entre documentos debemos primero calcular 3 valores: TF, IDF y TF-IDF
 
-#### 1. TF
+### 1. TF
 El valor TF ("Term Frecuency") lo calculamos en base a la cantidad de veces que aparece un determinado término en un documento. Simplemente contamos la cantidad de veces que aparece.
 
 La implementación hecha es la siguiente:
@@ -66,7 +84,7 @@ def calc_TF():
             matriz_terminos[doc][terminos_unicos.index(k)][0] = v
 ```
 
-#### 2. IDF
+### 2. IDF
 
 IDF ("Inverse Document Frequency") nos indica la frecuencia con la que aparece el término en la colección de documentos. El cálculo se realiza de la siguiente manera:
 
@@ -92,7 +110,7 @@ def calc_IDF():
             matriz_terminos[i][j][1] = valor
 ```
 
-#### 3. TF - IDF
+### 3. TF - IDF
 Este es el último valor a calcular antes de poder calcular la similitud entre documentos. Este valor se calcula simplemente como el producto entre los valores TF e IDF.
 
 ```python
@@ -136,7 +154,7 @@ N.  Termino              TF  IDF    TF-IDF
 ---------------------------------------------------------------
 ```
 
-#### 4. Calculo de la similitud.
+### 4. Calculo de la similitud.
 Para calcular la similitud entre dos documentos hacemos uso de la siguiente función.
 
 ![Imagen](./img/sim_cos.PNG)
